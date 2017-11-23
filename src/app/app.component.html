@@ -1,0 +1,64 @@
+<div class="container">
+  <h1>Shopping list</h1>
+  <div class="container-line"></div>
+  <div class="row">
+        <div class="center-block">
+  <tr class="form-group">
+      <td>
+            <input [maxLength]="inputLength" required class="form-control" type="text" id="newAttributeProduct" [(ngModel)]="newAttribute.product" name="newAttributeProduct" placeholder="Product"/>
+        </td>
+        <td>
+            <input [maxLength]="inputLength" class="form-control form-quantity" type="text" id="newAttributeQuantity" [(ngModel)]="newAttribute.quantity" name="newAttributeQuantity" placeholder="Quantity"/>
+        </td>
+        <td>
+            <select  class="form-control" type="text" id="newAttributeAmount" [(ngModel)]="newAttribute.amount" name="newAttributeAmount" #selectElem (change)="setAmount(selectElem.value)">
+                    Select
+                <option *ngFor="let amount of amounts" [value]="amount.Name">
+                    {{amount.Name}}
+                </option>
+            </select>
+        </td>
+            <textarea [maxLength]="textareaLength" class="form-control product-notation" id="exampleTextarea" rows="3" [(ngModel)]="newAttribute.notation" name="newAttributeNotation" placeholder="Note"></textarea>
+            <label class="form-check-label">
+            <input [(ngModel)]="prefrence" type="checkbox" value="" class="showForm-checkbox" data-toggle="tooltip" title="Produkt, który jest najważniejszy!" (click)="setPrefrence()">
+            Preference
+            </label>
+            <td>
+                <button class="btn btn-primary form-control" type="button" (click)="addFieldValue()">Add Product</button>
+            </td>
+        </tr>
+    </div>
+    </div>
+    <div class="table-wrapper">
+    <table class="table container-table">
+        <thead>
+          <tr>
+            <th scope="col" class="col-xs-3">Product</th>
+            <th scope="col" class="col-xs-3">Quantity</th>
+            <th scope="col" class="col-xs-5">Note</th>
+            <th scope="col" class="col-xs-1">#</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let field of fieldArray; let i = index;" [class.colorBodyChange]="field.isbought" class="hello">
+            <td>
+                <div>{{field.product}}</div>
+            </td>
+            <td>
+                <div>{{field.quantity}}  {{field.amount}}</div>
+            </td>
+            <td>
+                <div>{{field.notation}}</div>
+            </td>
+            <td class="bought-item">
+                <button class="btn btn-default"  type="button" (click)="deleteFieldValue(i)" data-toggle="tooltip" title="Delete product">X</button>
+                <button class="btn btn-default" type="button" (click)="boughtProduct(i)" data-toggle="tooltip" title="Done!">✓</button>
+            </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+
+
