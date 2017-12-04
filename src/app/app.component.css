@@ -1,5 +1,5 @@
 .container {
-  background-color: #b5b1dc;
+  background-color: #E2E2E2;
   color: #000;
   min-height: 100vh;
   height: 100%;
@@ -15,7 +15,7 @@
 
 .center-block {
   margin: 0 auto;
-  width: 35%;
+  width: 500px;
 }
 
 .container-line {
@@ -29,16 +29,16 @@
   width: 90%;
   margin: 50px auto;
   display: block;
-  background-color: #7d77c2;
+  background-color: rgb(218, 218, 218);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0   rgba(0,0,0,.12);
   border-radius: 2px;
 }
 
 .table-wrapper {
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   display: block;
-  background-color: #7d77c2;
+  background-color: rgb(218, 218, 218);
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0   rgba(0,0,0,.12);
   border-radius: 2px;
 }
@@ -47,15 +47,11 @@
   width: 100%;
   margin: 0 auto;
 }
-/* .form {
-  display: none;
-} */
 
 .showForm-checkbox {
   width: 20px;
   height: 20px;
 }
-
 
 .form-control {
   box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0   rgba(0,0,0,.12);
@@ -68,13 +64,13 @@
 
 .form-check-label {
   margin: 10px;
-  
 }
 
 .add-product {
   display: flex;
   margin-top: 10px;
 }
+
 .bought-item {
   display: flex;
 }
@@ -83,13 +79,13 @@
   background-color: rgb(13, 204, 13);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 501px) {
   .table-wrapper {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
 }
 
-.center-block {
-  width: 90%;
-}
+  .center-block {
+    width: 100%;
+  }
 }

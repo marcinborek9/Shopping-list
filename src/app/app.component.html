@@ -1,14 +1,14 @@
 <div class="container">
-  <h1>Shopping list</h1>
   <div class="container-line"></div>
-  <div class="row">
-        <div class="center-block">
+    <div class="row center-block">
+      <h1>Shopping list</h1>
+      <!-- <div class="center-block"> -->
   <tr class="form-group">
       <td>
             <input [maxLength]="inputLength" required class="form-control" type="text" id="newAttributeProduct" [(ngModel)]="newAttribute.product" name="newAttributeProduct" placeholder="Product"/>
         </td>
         <td>
-            <input [maxLength]="inputLength" class="form-control form-quantity" type="text" id="newAttributeQuantity" [(ngModel)]="newAttribute.quantity" name="newAttributeQuantity" placeholder="Quantity"/>
+            <input [maxLength]="inputLength" class="form-control form-quantity" type="number" id="newAttributeQuantity" [(ngModel)]="newAttribute.quantity" name="newAttributeQuantity" placeholder="Quantity" data-toggle="tooltip" data-placement="top" title="Numbers only"/>
         </td>
         <td>
             <select  class="form-control" type="text" id="newAttributeAmount" [(ngModel)]="newAttribute.amount" name="newAttributeAmount" #selectElem (change)="setAmount(selectElem.value)">
@@ -27,8 +27,8 @@
                 <button class="btn btn-primary form-control" type="button" (click)="addFieldValue()">Add Product</button>
             </td>
         </tr>
-    </div>
-    </div>
+    <!-- </div> -->
+</div>
     <div class="table-wrapper">
     <table class="table container-table">
         <thead>
@@ -58,6 +58,7 @@
         </tbody>
       </table>
     </div>
+
 </div>
 
 
